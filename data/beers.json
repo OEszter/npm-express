@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Dreher Gold",
+      "abv": 5
+    },
+    {
+      "id": 2,
+      "name": "Soproni Világos",
+      "abv": 4
+    },
+    {
+      "id": 3,
+      "name": "Borsodi",
+      "abv": 4.5
+    },
+    {
+      "id": 4,
+      "name": "Rocky Cellar",
+      "abv": 3
+    },
+    {
+      "id": 5,
+      "name": "Pécsi sör",
+      "abv": 4.8
+    }
+  ]
