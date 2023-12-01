@@ -1,3 +1,28 @@
-h1 {
-    color: red;
-}
+header {
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  header input {
+    display: inline !important; /* MINDENT FELÜLÍR AZ !IMPORTANT */
+    max-width: 200px;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  
+    padding: 20px;
+  }
+  
+  main > div {
+    width: 100vw;
+  }

@@ -29,17 +29,26 @@ app.get('/beers/:id', (req, res) => {
   const id = parseInt(req.params.id)
 
   if (isNaN(id)) {
-    res.status(400).json("id must be a number!")
+    res.status(400).json({
+      error: 400,
+      message: "id must be a number!"
+    })
   } else {
     fs.readFile(path.join(__dirname, '/data/beers.json'), 'utf8', (err, rawData) => {
       if (err) {
         console.log(err)
-        res.status(500).json("file not found")
+        res.status(500).json({
+          error: 500,
+          message: "file not found"
+        })
       } else {
         const data = JSON.parse(rawData)
         const foundBeer = data.find((beer) => beer.id === id)
         if (foundBeer) res.json(foundBeer)
-        else res.status(404).json("id not exists")
+        else res.status(404).json({
+          error: 404,
+          message: "id not exists"
+        })
       }
     })
   }
